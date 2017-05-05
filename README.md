@@ -1,14 +1,26 @@
 #MarriottDeepCrawler
+
+
+This is the final stage of my first Crawler. With this Crawler I want to get Name,Score,Url, Phone Number, Address and Number of Reviews for each Hotel. I used the Scrapy framework to implement and develop this project. With this Crawler I want to get Name,Score,Url, Phone Number, Address and Number of Reviews for each Hotel. With this project I learned a lot about How I should parse troguh webpages,Requests/Responses,HTML structure and Regular Expressions.
+
+The spider is located in MarriottCrawler/marriottspider/marriottspider/spiders/MarriottCrawler.py
+
+**Initial Page** http://www.marriott.com/hotel-search/
+
 #Documentation
+#Class attributes:
 
-
-Class attributes:
 **name** =’marriott’ → name of the spider
+
 **allowed_domains** =[ ‘marriott.com’] → with this we stop the spider from crawling to other pages
+
 **start_urls** = [ http://www.marriott.com/hotel-search/’ ]→ the starting page from which the spider crawls
+
+------------------------------------------------------------------------------------------------------------
 
 **rules** → with rules and link extractors we define how the links will be extracted from each crawled page
 E.g.:
+
 -First we search for links like:
 http://www.marriott.com/hotel-search/south-africa.hotels/
 http://www.marriott.com/hotel-search/arkansas.hotels.united-states/
@@ -32,9 +44,12 @@ http://www.marriott.com/hotels/travel/rogri-residence-inn-bentonville-rogers/
 using the final rule we also call the parse_item function which gets the information about the hotel and writes it in the .csv file
 
 	Rule(LinkExtractor(allow=('http:\/\/www\.marriott\.com\/hotels\/travel\/[a-z0-9A-Z\-\.]+[^w]')),callback='parse_item')
+    
 
+------------------------------------------------------------------------------------------------------------
 
 **parse_item**:
+
 -Desc: We are using responses and selectors to extract the information that we need
 about the hotel and write it into the .csv file using the scrapy crawl option
 **scrapy crawl marriott -o filename.csv -t csv**
