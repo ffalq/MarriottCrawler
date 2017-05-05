@@ -1,7 +1,14 @@
 #MarriottDeepCrawler
 
 
-This is the final stage of my first Crawler. With this Crawler I want to get Name,Score,Url, Phone Number, Address and Number of Reviews for each Hotel. I used the Scrapy framework to implement and develop this project. With this Crawler I want to get Name,Score,Url, Phone Number, Address and Number of Reviews for each Hotel. With this project I learned a lot about How I should parse troguh webpages,Requests/Responses,HTML structure and Regular Expressions.
+This is the final stage of my first Crawler. With this Crawler I want to get Name,Score,Url, Phone Number, Address and Number of Reviews for each Hotel. I used the Scrapy framework to implement and develop this project. With this Crawler I want to get Name,Score,Url, Phone Number, Address and Number of Reviews for each Hotel. With this project I learned a lot about How I should parse trough webpages,Requests/Responses,HTML structure and Regular Expressions.
+
+
+This project went trough 3 stages, first when I tried to do this without Rules which did not quite work because I couldn't get all the information about each Hotel, only partial information.
+
+Second stage was when I got to Rules and LinkExtractors when the project was working and is actually the version that is currently here written in the MarriotCrawler.py.
+
+Third when I created a Scrapy Project instead of the simple Python Flie because I learned that the scrapy project can have multiple settings and spiders in the same project and it can be easily modified and updated for further use.
 
 The spider is located in MarriottCrawler/marriottspider/marriottspider/spiders/MarriottCrawler.py
 
